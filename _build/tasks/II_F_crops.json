@@ -1,0 +1,376 @@
+[
+{
+"name": "PHAK_Fig10-1_lateral_longitudinal_unbalance",
+"pdf": "PHAK.pdf",
+"page": 246,
+"box": [
+0.5,
+0.57,
+0.97,
+0.885
+]
+},
+{
+"name": "PHAK_Fig10-2_weight_and_balance",
+"pdf": "PHAK.pdf",
+"page": 250,
+"box": [
+0.02,
+0.665,
+0.475,
+0.885
+]
+},
+{
+"name": "PHAK_Fig10-3_determining_moment",
+"pdf": "PHAK.pdf",
+"page": 250,
+"box": [
+0.465,
+0.04,
+0.97,
+0.275
+]
+},
+{
+"name": "PHAK_Fig10-5_wb_computation",
+"pdf": "PHAK.pdf",
+"page": 251,
+"box": [
+0.52,
+0.04,
+0.97,
+0.205
+]
+},
+{
+"name": "PHAK_Fig11-4_density_altitude_chart",
+"pdf": "PHAK.pdf",
+"page": 260,
+"box": [
+0.52,
+0.215,
+0.98,
+0.865
+]
+},
+{
+"name": "PHAK_Fig11-15_takeoff_distance_chart",
+"pdf": "PHAK.pdf",
+"page": 269,
+"box": [
+0.03,
+0.04,
+0.95,
+0.343
+]
+},
+{
+"name": "PHAK_Fig11-16_runway_surface",
+"pdf": "PHAK.pdf",
+"page": 269,
+"box": [
+0.03,
+0.655,
+0.95,
+0.865
+]
+},
+{
+"name": "PHAK_Fig11-17_chart_supplement",
+"pdf": "PHAK.pdf",
+"page": 270,
+"box": [
+0.03,
+0.04,
+0.95,
+0.352
+]
+},
+{
+"name": "PHAK_Fig11-19_wind_effect",
+"pdf": "PHAK.pdf",
+"page": 271,
+"box": [
+0.53,
+0.575,
+0.95,
+0.893
+]
+},
+{
+"name": "PHAK_Fig11-20_conditions_notes",
+"pdf": "PHAK.pdf",
+"page": 275,
+"box": [
+0.1,
+0.6,
+0.98,
+0.885
+]
+},
+{
+"name": "PHAK_Fig11-21_interpolating",
+"pdf": "PHAK.pdf",
+"page": 276,
+"box": [
+0.05,
+0.62,
+0.95,
+0.9
+]
+},
+{
+"name": "PHAK_Fig5-63_load_distribution",
+"pdf": "PHAK.pdf",
+"page": 140,
+"box": [
+0.02,
+0.62,
+0.53,
+0.885
+]
+},
+{
+"name": "PHAK_10-11_weight_shift_example",
+"pdf": "PHAK.pdf",
+"page": 255,
+"box": [
+0.02,
+0.25,
+0.53,
+0.48
+]
+},
+{
+"name": "POH_Fig2-1_airspeed_limitations",
+"pdf": "c172s_pim.pdf",
+"page": 36,
+"box": [
+0.05,
+0.262,
+0.94,
+0.688
+]
+},
+{
+"name": "POH_2-8_weight_limits",
+"pdf": "c172s_pim.pdf",
+"page": 40,
+"box": [
+0.05,
+0.09,
+0.94,
+0.33
+]
+},
+{
+"name": "POH_2-8_cg_limits",
+"pdf": "c172s_pim.pdf",
+"page": 40,
+"box": [
+0.05,
+0.62,
+0.94,
+0.89
+]
+},
+{
+"name": "POH_5-1_performance_contents",
+"pdf": "c172s_pim.pdf",
+"page": 140,
+"box": [
+0.06,
+0.1,
+0.94,
+0.76
+]
+},
+{
+"name": "POH_Fig5-5_short_field_takeoff_table",
+"pdf": "c172s_pim.pdf",
+"page": 152,
+"box": [
+0.06,
+0.172,
+0.94,
+0.612
+]
+},
+{
+"name": "POH_Fig5-5_short_field_takeoff_notes",
+"pdf": "c172s_pim.pdf",
+"page": 152,
+"box": [
+0.06,
+0.67,
+0.94,
+0.848
+]
+},
+{
+"name": "POH_Fig5-7_time_fuel_distance_climb",
+"pdf": "c172s_pim.pdf",
+"page": 156,
+"box": [
+0.06,
+0.088,
+0.94,
+0.865
+]
+},
+{
+"name": "POH_Fig5-8_cruise_performance",
+"pdf": "c172s_pim.pdf",
+"page": 157,
+"box": [
+0.06,
+0.098,
+0.94,
+0.757
+]
+},
+{
+"name": "POH_Fig5-9_range_profile",
+"pdf": "c172s_pim.pdf",
+"page": 159,
+"box": [
+0.06,
+0.098,
+0.94,
+0.758
+]
+},
+{
+"name": "POH_Fig5-11_short_field_landing_table",
+"pdf": "c172s_pim.pdf",
+"page": 161,
+"box": [
+0.06,
+0.162,
+0.94,
+0.598
+]
+},
+{
+"name": "POH_Fig5-11_short_field_landing_notes",
+"pdf": "c172s_pim.pdf",
+"page": 161,
+"box": [
+0.06,
+0.662,
+0.94,
+0.86
+]
+},
+{
+"name": "POH_Fig6-3_sample_loading_problem",
+"pdf": "c172s_pim.pdf",
+"page": 170,
+"box": [
+0.05,
+0.1,
+0.95,
+0.86
+]
+},
+{
+"name": "POH_Fig6-4_loading_graph",
+"pdf": "c172s_pim.pdf",
+"page": 172,
+"box": [
+0.05,
+0.088,
+0.95,
+0.745
+]
+},
+{
+"name": "POH_Fig6-7_cg_moment_envelope",
+"pdf": "c172s_pim.pdf",
+"page": 175,
+"box": [
+0.05,
+0.12,
+0.95,
+0.86
+]
+},
+{
+"name": "TCDS_3A12_p30_172S_engine_limits",
+"pdf": "tcds_3A12.pdf",
+"page": 30,
+"box": [
+0.08,
+0.085,
+0.97,
+0.229
+]
+},
+{
+"name": "TCDS_3A12_p30_172S_cg_datum",
+"pdf": "tcds_3A12.pdf",
+"page": 30,
+"box": [
+0.08,
+0.37,
+0.97,
+0.618
+]
+},
+{
+"name": "TCDS_3A12_p30_172S_weights_fuel",
+"pdf": "tcds_3A12.pdf",
+"page": 30,
+"box": [
+0.08,
+0.62,
+0.97,
+0.935
+]
+},
+{
+"name": "PHAK_Fig10-4_establishing_balance",
+"pdf": "PHAK.pdf",
+"page": 250,
+"box": [
+0.47,
+0.655,
+0.9,
+0.885
+]
+},
+{
+"name": "PHAK_Fig5-63_forward_cg",
+"pdf": "PHAK.pdf",
+"page": 140,
+"box": [
+0.02,
+0.625,
+0.53,
+0.758
+]
+},
+{
+"name": "PHAK_Fig5-63_aft_cg",
+"pdf": "PHAK.pdf",
+"page": 140,
+"box": [
+0.02,
+0.763,
+0.53,
+0.885
+]
+},
+{
+"name": "POH_Fig5-5_sheet3_2200lb_table",
+"pdf": "c172s_pim.pdf",
+"page": 154,
+"box": [
+0.06,
+0.172,
+0.94,
+0.605
+]
+}
+]

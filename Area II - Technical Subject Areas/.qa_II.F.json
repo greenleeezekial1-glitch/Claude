@@ -1,0 +1,99 @@
+{
+ "code": "II.F",
+ "name": "Performance and Limitations",
+ "slides": 42,
+ "issues": [],
+ "cover": {
+  "AI.II.F.K1": [
+   4,
+   5,
+   6,
+   27
+  ],
+  "AI.II.F.K2a": [
+   7,
+   8
+  ],
+  "AI.II.F.K2b": [
+   9
+  ],
+  "AI.II.F.K2c": [
+   10
+  ],
+  "AI.II.F.K2d": [
+   11,
+   12
+  ],
+  "AI.II.F.K2e": [
+   13
+  ],
+  "AI.II.F.K3": [
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22
+  ],
+  "AI.II.F.R2": [
+   14,
+   20,
+   38
+  ],
+  "AI.II.F.K4": [
+   23,
+   24
+  ],
+  "AI.II.F.K5": [
+   25,
+   26
+  ],
+  "AI.II.F.S1": [
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   40
+  ],
+  "AI.II.F.S2": [
+   33,
+   34,
+   35,
+   36,
+   40
+  ],
+  "AI.II.F.R6": [
+   35,
+   36,
+   39
+  ],
+  "AI.II.F.R1": [
+   37
+  ],
+  "AI.II.F.R3": [
+   37
+  ],
+  "AI.II.F.R4": [
+   38
+  ],
+  "AI.II.F.R5": [
+   39
+  ],
+  "AI.II.F.K2": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13
+  ]
+ },
+ "status": "Sample built, awaiting approval",
+ "note": "C172S G1000 POH and TCDS 3A12 examples"
+}
