@@ -5,7 +5,7 @@ def load(p):
     sp = importlib.util.spec_from_file_location(os.path.basename(p)[:-3], p); m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m); return m
 taskfile, extrasfile, imgdir, outdir, acsjson = sys.argv[1:6]
 task = load(taskfile).TASK; ex = load(extrasfile)
-extras = {k: getattr(ex, k, {}) for k in ('SECTIONS', 'CHECKS', 'KNOW', 'MEMORY', 'SCENARIO', 'IMG2', 'PLAIN')}
+extras = {k: getattr(ex, k, {}) for k in ('SECTIONS', 'CHECKS', 'KNOW', 'MEMORY', 'SCENARIO', 'IMG2', 'PLAIN', 'NEXT')}
 titles = {s['title'] for s in task['slides']}
 for k, d in extras.items():
     for t in d:

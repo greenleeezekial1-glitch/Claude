@@ -269,6 +269,7 @@ def build_lp(task, out):
         if d.get('ask'):
             _p(doc, '', bold_lead='Ask the student:')
             _bullets(doc, d['ask'])
+        if d.get('next'): _p(doc, d['next'], bold_lead='Transition:')
         if s.get('cite'): _p(doc, s['cite'], bold_lead='Source:')
     # 8 / 9
     _h(doc, '7. Instructor Actions'); _bullets(doc, lp['instructor'])

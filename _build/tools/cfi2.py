@@ -22,7 +22,8 @@ FILL = {'know': (RGBColor(0xFF, 0xF4, 0xD6), AMBER, 'KNOW THIS FOR THE CHECKRIDE
         'example': (RGBColor(0xE6, 0xF4, 0xEA), RGBColor(0x2E, 0x7D, 0x32), 'EXAMPLE'),
         'analogy': (RGBColor(0xE6, 0xF4, 0xEA), RGBColor(0x2E, 0x7D, 0x32), 'THINK OF IT LIKE THIS'),
         'ask': (RGBColor(0xE8, 0xF1, 0xFA), BLUE, 'ASK YOUR STUDENT'),
-        'scenario': (RGBColor(0xFD, 0xEC, 0xEA), RGBColor(0xC6, 0x28, 0x28), 'REAL WORLD SCENARIO')}
+        'scenario': (RGBColor(0xFD, 0xEC, 0xEA), RGBColor(0xC6, 0x28, 0x28), 'REAL WORLD SCENARIO'),
+        'next': (RGBColor(0xE3, 0xEA, 0xF4), NAVY, 'NEXT UP')}
 SW, SH = Inches(13.333), Inches(7.5)
 EMBED = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '_embed')
 
@@ -244,7 +245,8 @@ def build_deck(slides, imgdir, out):
             rows = math.ceil(len(qs) / cols); qpt = 20 if cols == 1 else 16
             tw = colw / 914400 - 1.0
             need = [Inches(est_height([q], qpt, tw) + est_height([a], qpt - 3, tw) + 0.45) for q, a in qs]
-            rh = min((Inches(5.5) - Inches(0.2) * (rows - 1)) // rows, max(need))
+            avail = Inches(4.45) if s.get('next') else Inches(5.5)
+            rh = min((avail - Inches(0.2) * (rows - 1)) // rows, max(need))
             for i, (q, a) in enumerate(qs):
                 cx = Inches(0.45) + (i // rows) * (colw + Inches(0.2)); cy = Inches(1.4) + (i % rows) * (rh + Inches(0.2))
                 _box(sl, cx, cy, colw, rh, RGBColor(0xF3, 0xF6, 0xFA), LINE, MSO_SHAPE.ROUNDED_RECTANGLE)
@@ -252,7 +254,10 @@ def build_deck(slides, imgdir, out):
                 p = num.text_frame.paragraphs[0]; p.alignment = PP_ALIGN.CENTER; r = p.add_run(); r.text = str(i + 1); _font(r, 16, WHITE, True)
                 _tb(sl, cx + Inches(0.8), cy + Inches(0.12), colw - Inches(1.0), rh - Inches(0.2),
                     [[(q, qpt, NAVY, True, False)], [('Answer: ', qpt - 3, RGBColor(0x2E, 0x7D, 0x32), True, False), (a, qpt - 3, INK, False, False)]], space=6)
-            if s.get('img'):
+            yb = Inches(1.4) + rows * (rh + Inches(0.2))
+            if s.get('next'):
+                _callout(sl, 'next', s['next'], Inches(0.45), Inches(6.85) - Inches(0.85), Inches(12.4), Inches(0.85))
+            if s.get('img') and not s.get('next'):
                 yb = Inches(1.4) + rows * (rh + Inches(0.2))
                 if Inches(6.85) - yb > Inches(2.4):
                     _picture(sl, os.path.join(s['_imgdir'], s['img'] + '.png'), Inches(3.5), yb, Inches(6.3), Inches(6.85) - yb)
@@ -261,7 +266,7 @@ def build_deck(slides, imgdir, out):
             _title_bar(sl, s['title'], s.get('code'), n)
             lp = s.get('lp', {})
             callouts = []
-            for k in ('know', 'memory', 'scenario'):
+            for k in ('next', 'know', 'memory', 'scenario'):
                 if s.get(k): callouts.append((k, s[k]))
             if lp.get('example') and len(callouts) < 2: callouts.append(('example', lp['example']))
             if lp.get('analogy') and len(callouts) < 2: callouts.append(('analogy', lp['analogy'].replace('Analogy: ', '').replace('Analogy from the PHAK: ', '')))
@@ -330,9 +335,11 @@ def expand(task, extras, imgdir):
             sec['lp'] = {'teach': ['Section start: ' + sec['title'] + '. Goals: ' + '; '.join(sec['goals']) + '.']}
             out.append(sec)
         s = dict(s); s['_imgdir'] = imgdir
-        for k in ('KNOW', 'MEMORY', 'SCENARIO', 'IMG2', 'PLAIN'):
+        for k in ('KNOW', 'MEMORY', 'SCENARIO', 'IMG2', 'PLAIN', 'NEXT'):
             v = extras.get(k, {}).get(t)
-            if v: s[{'KNOW': 'know', 'MEMORY': 'memory', 'SCENARIO': 'scenario', 'IMG2': 'img2', 'PLAIN': 'plain'}[k]] = v
+            if v: s[{'KNOW': 'know', 'MEMORY': 'memory', 'SCENARIO': 'scenario', 'IMG2': 'img2', 'PLAIN': 'plain', 'NEXT': 'next'}[k]] = v
+        if s.get('next'):
+            s['lp'] = dict(s.get('lp') or {}); s['lp']['next'] = s['next']
         teach = (s.get('lp') or {}).get('teach', [])
         s['detail'] = [] if t in ('Review Questions', 'References') else [re.sub(r'\s+', ' ', x) for x in teach]
         out.append(s)
@@ -341,5 +348,7 @@ def expand(task, extras, imgdir):
             c['notes'] = 'Ask each question and let the student answer before showing the answer. ' + ' '.join(f'Q{i+1}: {q} A: {a}' for i, (q, a) in enumerate(c['qa']))
             c['lp'] = {'teach': ['Quick check. Ask each question, wait for the answer, then confirm.'], 'table': [['Question', 'Answer']] + [list(x) for x in c['qa']]}
             c['img'] = c.get('img', s['img']); c['_imgdir'] = imgdir
+            if s.get('next'):
+                c['next'] = s.pop('next'); c['lp']['next'] = c['next']; s['lp'].pop('next', None)
             out.append(c)
     return out
