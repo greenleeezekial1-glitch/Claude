@@ -83,7 +83,8 @@ def _table(slide, rows, x, y, w, size=16, col_w=None, bold_last=False):
         for c, val in enumerate(row):
             cell = tbl.cell(r, c); cell.text = ''
             tf = cell.text_frame; p = tf.paragraphs[0]
-            p.alignment = PP_ALIGN.LEFT if c == 0 else PP_ALIGN.RIGHT
+            num = all(re.fullmatch(r'[-0-9.,% ]*', str(rw[c])) for rw in rows[1:])
+            p.alignment = PP_ALIGN.RIGHT if (c > 0 and num) else PP_ALIGN.LEFT
             run = p.add_run(); run.text = str(val)
             _run_fmt(run, size, TITLE_C if r == 0 else BODY_C, bold=(r == 0 or (bold_last and r == nr - 1)))
             cell.margin_left = cell.margin_right = Inches(0.08)

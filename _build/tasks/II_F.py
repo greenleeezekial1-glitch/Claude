@@ -17,7 +17,7 @@ TASK = {
   'notes': 'Today we learn how to predict what the airplane will do before we fly it, and how to load it so it stays inside its limits. Everything we use comes from the POH, the TCDS, and the FAA handbooks.',
   'lp': {'teach': ['Show the title slide while you give the attention step from the Introduction. The photos show the same airplane on pavement and on grass. Ask the student which one needs more runway and why. The answer comes later in the lesson.']}},
  # 2
- {'title': 'Objective', 'img': 'PHAK_Fig11-15_takeoff_distance_chart', 'cite': 'ACS II.F, PHAK Fig 11-15', 'code': 'AI.II.F',
+ {'title': 'Objective', 'img': 'POH_Fig5-5_short_field_takeoff_table', 'cite': 'ACS II.F, POH Fig 5-5', 'code': 'AI.II.F',
   'bullets': ['Read POH performance charts', 'Explain what changes performance', 'Compute weight and CG', 'Fix loading that is out of limits'],
   'notes': 'By the end you will be able to use the C172S charts to get real numbers, compute weight and balance, fix a bad CG, and explain the risks of skipping these steps.',
   'lp': {'teach': ['State the objective in plain words. The student will use the charts, tables, and data in the C172S POH to predict takeoff, climb, cruise, fuel, and landing performance. The student will compute weight and balance, correct a CG that is out of limits, and check that weight and balance stays in limits for the whole flight.']}},
@@ -68,7 +68,7 @@ TASK = {
    'example': 'On the C172S takeoff chart at 2,550 lb and sea level, total distance over a 50 foot obstacle grows from 1,465 feet at 0 degrees C to 1,945 feet at 40 degrees C. At 8,000 feet and 40 degrees C it is 4,615 feet (POH Fig 5-5).',
       'ask': ['Why does the same airplane need more runway in July than in January?', 'Name the three things thin air takes away.']}},
  # 9
- {'title': 'Pilot Technique', 'img': 'PHAK_Fig11-15_takeoff_distance_chart', 'cite': 'POH 5-3, POH Fig 5-5, PHAK 11-15, PHAK 11-19', 'code': 'AI.II.F.K2b',
+ {'title': 'Pilot Technique', 'img': 'POH_Fig5-5_short_field_takeoff_notes', 'cite': 'POH 5-3, POH Fig 5-5, PHAK 11-15, PHAK 11-19', 'code': 'AI.II.F.K2b',
   'bullets': ['Charts assume average technique', 'Use the chart\'s exact speeds', 'Short field technique: Section 4', 'Weak technique: add margin'],
   'notes': 'The numbers only work if we fly the way the chart assumes. The C172S takeoff chart says short field technique per Section 4, lift off at 51 KIAS, 56 KIAS at 50 feet.',
   'lp': {'teach': ['The data assumes average piloting technique (POH 5-3). If skills are below average, the PHAK says to compensate for the chart numbers (PHAK 11-19).',
@@ -304,7 +304,7 @@ TASK = {
      'In the C172S, the practical fixes are moving bags forward, swapping heavier people to the front seats, or reducing weight (PHAK 10-3).'],
    'ask': ['The CG is too far aft. Name two ways to fix it in a C172S.']}},
  # 37
- {'title': 'Risk: Charts vs. Real Life', 'img': 'PHAK_Fig11-15_takeoff_distance_chart', 'cite': 'POH 5-3, POH 5-4, PHAK 11-19', 'code': 'AI.II.F.R1, AI.II.F.R3',
+ {'title': 'Risk: Charts vs. Real Life', 'img': 'POH_5-3_performance_intro', 'cite': 'POH 5-3, POH 5-4, PHAK 11-19', 'code': 'AI.II.F.R1, AI.II.F.R3',
   'bullets': ['Expect 10% or more variation', 'Use conservative chart values', 'Set an abort point', 'Scenario: hot day, short strip'],
   'notes': 'Scenario: a hot afternoon, a 2,400 foot strip, full airplane. The chart says it fits with 300 feet to spare. Is that enough when the airplane is old and the grass is long? Talk through it.',
   'lp': {'teach': ['R1: Wrong chart, wrong row, or skipped notes give a wrong answer. Always read conditions and notes and use conservative values (POH 5-4).',

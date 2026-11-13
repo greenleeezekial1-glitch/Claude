@@ -5,7 +5,9 @@ taskfile,imgdir,outdir,acsjson=sys.argv[1:5]
 spec=importlib.util.spec_from_file_location('t',taskfile); m=importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
 task=m.TASK
 a=json.load(open(acsjson))
-for ar in a['kept']:
+for ar in ([] if task.get('elements') else a['kept']):
+    pass
+for ar in ([] if task.get('elements') else a['kept']):
     for t in ar['tasks']:
         if f"{ar['num']}.{t['id']}"==task['code']: task['elements']=t['elements']
 iss=cfi.qa(task,imgdir)

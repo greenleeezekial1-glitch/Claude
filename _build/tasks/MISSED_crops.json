@@ -1,0 +1,244 @@
+[
+{
+"name": "AIH_Fig3-5_senses",
+"pdf": "AIH.pdf",
+"page": 58,
+"box": [
+0.02,
+0.18,
+0.97,
+0.522
+]
+},
+{
+"name": "PHAK_Fig5-21_static_stability",
+"pdf": "PHAK.pdf",
+"page": 111,
+"box": [
+0.03,
+0.6,
+0.97,
+0.9
+]
+},
+{
+"name": "PHAK_Fig5-22_dynamic_stability",
+"pdf": "PHAK.pdf",
+"page": 112,
+"box": [
+0.03,
+0.62,
+0.97,
+0.897
+]
+},
+{
+"name": "PHAK_Fig7-2_opposed_engine",
+"pdf": "PHAK.pdf",
+"page": 162,
+"box": [
+0.47,
+0.7,
+0.97,
+0.902
+]
+},
+{
+"name": "PHAK_Fig7-6_prop_blade_angle",
+"pdf": "PHAK.pdf",
+"page": 165,
+"box": [
+0.08,
+0.03,
+0.535,
+0.218
+]
+},
+{
+"name": "PHAK_Fig7-8_tachometer",
+"pdf": "PHAK.pdf",
+"page": 165,
+"box": [
+0.52,
+0.668,
+0.97,
+0.885
+]
+},
+{
+"name": "PHAK_Fig16-6_compass_rose",
+"pdf": "PHAK.pdf",
+"page": 393,
+"box": [
+0.03,
+0.03,
+0.465,
+0.372
+]
+},
+{
+"name": "PHAK_Fig16-7_true_course",
+"pdf": "PHAK.pdf",
+"page": 393,
+"box": [
+0.03,
+0.69,
+0.465,
+0.868
+]
+},
+{
+"name": "PHAK_Fig16-9_isogonic",
+"pdf": "PHAK.pdf",
+"page": 394,
+"box": [
+0.08,
+0.03,
+0.532,
+0.346
+]
+},
+{
+"name": "PHAK_Fig16-18_plotter",
+"pdf": "PHAK.pdf",
+"page": 400,
+"box": [
+0.08,
+0.035,
+0.95,
+0.235
+]
+},
+{
+"name": "PHAK_Fig16-25_sectional_course",
+"pdf": "PHAK.pdf",
+"page": 406,
+"box": [
+0.03,
+0.03,
+0.97,
+0.785
+]
+},
+{
+"name": "PHAK_Fig16-29_vor_indicator",
+"pdf": "PHAK.pdf",
+"page": 411,
+"box": [
+0.03,
+0.6,
+0.462,
+0.903
+]
+},
+{
+"name": "PHAK_Fig16-30_hsi",
+"pdf": "PHAK.pdf",
+"page": 411,
+"box": [
+0.47,
+0.03,
+0.97,
+0.572
+]
+},
+{
+"name": "PHAK_Fig16-32_vor_tracking",
+"pdf": "PHAK.pdf",
+"page": 412,
+"box": [
+0.525,
+0.03,
+0.97,
+0.797
+]
+},
+{
+"name": "POH_Fig4-3_cruise_table",
+"pdf": "c172s_pim.pdf",
+"page": 122,
+"box": [
+0.06,
+0.455,
+0.94,
+0.732
+]
+},
+{
+"name": "POH_FigS1-2_elt",
+"pdf": "c172s_pim.pdf",
+"page": 289,
+"box": [
+0.06,
+0.128,
+0.94,
+0.395
+]
+},
+{
+"name": "POH_8-7_inspection_periods",
+"pdf": "c172s_pim.pdf",
+"page": 261,
+"box": [
+0.06,
+0.588,
+0.94,
+0.918
+]
+},
+{
+"name": "POH_7-71_elt",
+"pdf": "c172s_pim.pdf",
+"page": 253,
+"box": [
+0.06,
+0.105,
+0.94,
+0.362
+]
+},
+{
+"name": "POH_7-36_propeller",
+"pdf": "c172s_pim.pdf",
+"page": 218,
+"box": [
+0.06,
+0.612,
+0.94,
+0.722
+]
+},
+{
+"name": "POH_7-28_engine",
+"pdf": "c172s_pim.pdf",
+"page": 210,
+"box": [
+0.06,
+0.108,
+0.94,
+0.298
+]
+},
+{
+"name": "PHAK_Fig16-31_rmi",
+"pdf": "PHAK.pdf",
+"page": 412,
+"box": [
+0.08,
+0.03,
+0.5,
+0.336
+]
+},
+{
+"name": "POH_8-7_airplane_file",
+"pdf": "c172s_pim.pdf",
+"page": 261,
+"box": [
+0.06,
+0.1,
+0.94,
+0.413
+]
+}
+]
