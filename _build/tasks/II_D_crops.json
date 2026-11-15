@@ -1,0 +1,398 @@
+[
+{
+"name": "PHAK_Fig4-4_venturi",
+"pdf": "PHAK.pdf",
+"page": 93,
+"box": [
+0.03,
+0.68,
+0.885,
+0.9
+]
+},
+{
+"name": "PHAK_Fig4-5_airfoil_section",
+"pdf": "PHAK.pdf",
+"page": 94,
+"box": [
+0.03,
+0.03,
+0.535,
+0.221
+]
+},
+{
+"name": "PHAK_Fig4-7_pressure_distribution",
+"pdf": "PHAK.pdf",
+"page": 95,
+"box": [
+0.465,
+0.055,
+0.885,
+0.738
+]
+},
+{
+"name": "PHAK_Fig5-3_aoa_speeds",
+"pdf": "PHAK.pdf",
+"page": 100,
+"box": [
+0.08,
+0.75,
+0.95,
+0.903
+]
+},
+{
+"name": "PHAK_Fig5-5_cl_cd_aoa",
+"pdf": "PHAK.pdf",
+"page": 101,
+"box": [
+0.03,
+0.62,
+0.97,
+0.898
+]
+},
+{
+"name": "PHAK_Fig5-6_drag_speed",
+"pdf": "PHAK.pdf",
+"page": 102,
+"box": [
+0.535,
+0.7,
+0.97,
+0.889
+]
+},
+{
+"name": "PHAK_Fig5-7_form_drag",
+"pdf": "PHAK.pdf",
+"page": 103,
+"box": [
+0.03,
+0.7,
+0.49,
+0.902
+]
+},
+{
+"name": "PHAK_Fig5-8_interference_drag",
+"pdf": "PHAK.pdf",
+"page": 103,
+"box": [
+0.5,
+0.7,
+0.97,
+0.899
+]
+},
+{
+"name": "PHAK_Fig5-12_wingtip_vortices",
+"pdf": "PHAK.pdf",
+"page": 106,
+"box": [
+0.08,
+0.03,
+0.49,
+0.326
+]
+},
+{
+"name": "PHAK_Fig5-13_avoid_following",
+"pdf": "PHAK.pdf",
+"page": 106,
+"box": [
+0.08,
+0.71,
+0.95,
+0.901
+]
+},
+{
+"name": "PHAK_Fig5-14_avoid_takeoff_landing",
+"pdf": "PHAK.pdf",
+"page": 107,
+"box": [
+0.03,
+0.03,
+0.97,
+0.242
+]
+},
+{
+"name": "PHAK_Fig5-15_vortex_near_ground",
+"pdf": "PHAK.pdf",
+"page": 107,
+"box": [
+0.03,
+0.26,
+0.97,
+0.864
+]
+},
+{
+"name": "PHAK_Fig5-18_axes",
+"pdf": "PHAK.pdf",
+"page": 109,
+"box": [
+0.03,
+0.71,
+0.97,
+0.903
+]
+},
+{
+"name": "PHAK_Fig5-24_downwash_speed",
+"pdf": "PHAK.pdf",
+"page": 113,
+"box": [
+0.48,
+0.03,
+0.97,
+0.393
+]
+},
+{
+"name": "PHAK_Fig5-23_longitudinal",
+"pdf": "PHAK.pdf",
+"page": 113,
+"box": [
+0.03,
+0.74,
+0.49,
+0.901
+]
+},
+{
+"name": "PHAK_Fig5-28_dihedral",
+"pdf": "PHAK.pdf",
+"page": 115,
+"box": [
+0.03,
+0.74,
+0.97,
+0.891
+]
+},
+{
+"name": "PHAK_Fig5-29_sideslip",
+"pdf": "PHAK.pdf",
+"page": 115,
+"box": [
+0.48,
+0.03,
+0.97,
+0.318
+]
+},
+{
+"name": "PHAK_Fig5-32_fin",
+"pdf": "PHAK.pdf",
+"page": 116,
+"box": [
+0.535,
+0.03,
+0.97,
+0.413
+]
+},
+{
+"name": "PHAK_Fig5-47_torque",
+"pdf": "PHAK.pdf",
+"page": 128,
+"box": [
+0.08,
+0.75,
+0.49,
+0.904
+]
+},
+{
+"name": "PHAK_Fig5-48_corkscrew",
+"pdf": "PHAK.pdf",
+"page": 128,
+"box": [
+0.52,
+0.75,
+0.97,
+0.892
+]
+},
+{
+"name": "PHAK_Fig5-49_precession",
+"pdf": "PHAK.pdf",
+"page": 129,
+"box": [
+0.03,
+0.03,
+0.475,
+0.192
+]
+},
+{
+"name": "PHAK_Fig5-51_p_factor",
+"pdf": "PHAK.pdf",
+"page": 130,
+"box": [
+0.08,
+0.03,
+0.52,
+0.257
+]
+},
+{
+"name": "PHAK_Fig5-52_turn_forces",
+"pdf": "PHAK.pdf",
+"page": 131,
+"box": [
+0.03,
+0.7,
+0.49,
+0.887
+]
+},
+{
+"name": "PHAK_Fig5-53_bank_load_factor",
+"pdf": "PHAK.pdf",
+"page": 131,
+"box": [
+0.48,
+0.7,
+0.97,
+0.898
+]
+},
+{
+"name": "PHAK_Fig5-54_stall_speed",
+"pdf": "PHAK.pdf",
+"page": 132,
+"box": [
+0.03,
+0.6,
+0.97,
+0.894
+]
+},
+{
+"name": "PHAK_Fig4-6_airfoil_designs",
+"pdf": "PHAK.pdf",
+"page": 94,
+"box": [
+0.548,
+0.58,
+0.97,
+0.897
+]
+},
+{
+"name": "POH_2-11_load_factor_limits",
+"pdf": "c172s_pim.pdf",
+"page": 43,
+"box": [
+0.06,
+0.105,
+0.94,
+0.455
+]
+},
+{
+"name": "POH_Fig5-3_stall_speeds",
+"pdf": "c172s_pim.pdf",
+"page": 150,
+"box": [
+0.06,
+0.125,
+0.94,
+0.862
+]
+},
+{
+"name": "PHAK_Fig5-11_downwash_alt_ground",
+"pdf": "PHAK.pdf",
+"page": 105,
+"box": [
+0.02,
+0.04,
+0.466,
+0.372
+]
+},
+{
+"name": "PHAK_Fig5-10_vortex_size",
+"pdf": "PHAK.pdf",
+"page": 104,
+"box": [
+0.528,
+0.61,
+0.97,
+0.875
+]
+},
+{
+"name": "PHAK_Fig5-16_ground_effect_airflow",
+"pdf": "PHAK.pdf",
+"page": 108,
+"box": [
+0.535,
+0.035,
+0.97,
+0.178
+]
+},
+{
+"name": "PHAK_Fig5-17_ground_effect_drag_lift",
+"pdf": "PHAK.pdf",
+"page": 108,
+"box": [
+0.03,
+0.7,
+0.97,
+0.905
+]
+},
+{
+"name": "PHAK_Fig6-5_adverse_yaw",
+"pdf": "PHAK.pdf",
+"page": 151,
+"box": [
+0.545,
+0.575,
+0.97,
+0.835
+]
+},
+{
+"name": "AC90-23G_Fig1_rollup",
+"pdf": "ac9023.pdf",
+"page": 2,
+"box": [
+0.15,
+0.16,
+0.82,
+0.475
+]
+},
+{
+"name": "AC90-23G_Fig2_induced_roll",
+"pdf": "ac9023.pdf",
+"page": 3,
+"box": [
+0.18,
+0.25,
+0.82,
+0.565
+]
+},
+{
+"name": "AC90-23G_Fig7_crosswind",
+"pdf": "ac9023.pdf",
+"page": 6,
+"box": [
+0.23,
+0.235,
+0.82,
+0.443
+]
+}
+]
