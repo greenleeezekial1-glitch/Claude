@@ -95,3 +95,44 @@ SCENARIO = {
 
 IMG2 = {}
 PLAIN = {}
+
+# ---- v3: no questions, no scenarios, statements only
+CHECKS = {}
+SCENARIO = {}
+NEXT = {
+ 'Definition: Critical Angle of Attack': 'Next: the forces and drag produced along with lift.',
+ 'Definition: Parasite Drag': 'Next: induced drag, the drag caused by producing lift.',
+ 'Induced Drag in a Turn: Adverse Yaw': 'Next: ground effect, where induced drag decreases.',
+ 'Induced Drag Near the Ground: Ground Effect': 'Next: wake turbulence, the same wingtip vortices trailing behind the aircraft.',
+ 'Wake Turbulence Precautions': 'Next: stability, how the airplane returns to equilibrium after a disturbance.',
+ 'Definitions: Maneuverability and Controllability': 'Next: turning tendencies, the propeller effects that yaw the nose left.',
+ 'Turning Tendencies: P-Factor': 'Next: load factors, the limit on how hard the airplane can be maneuvered.',
+ 'Maneuvering Speed (VA)': 'Next: risk management and in-flight instruction.',
+ 'Lesson Roadmap': 'Step 1: how the wing produces lift.',
+}
+MEMORY = {
+ 'Static Stability: The Bowl Method': 'Bowl: rolls back. Flat floor: sidesteps and stays. Hill: rolls away.',
+ 'Wake Turbulence Precautions': 'Land beyond, rotate before, stay above.',
+ 'From Wingtip Vortex to Wake Turbulence': 'Heavy, clean, slow.',
+}
+SECTIONS['The Four Forces']['why'] = 'Lift produces the four forces and two types of drag. Induced drag is a direct result of lift.'
+SECTIONS['From Wingtip Vortex to Wake Turbulence']['why'] = 'The wingtip vortices that cause induced drag trail behind every aircraft as wake turbulence.'
+SECTIONS['Definition: Stability']['why'] = 'Stability is the airplane\'s design response to disturbances such as gusts and wake.'
+SECTIONS['Turning Tendencies: Torque Reaction']['why'] = 'Engine and propeller effects continuously yaw and roll the airplane left.'
+SECTIONS['Definition: Load Factor']['why'] = 'Maneuvering increases load factor, which raises stall speed and limits structural margins.'
+SECTIONS['Risk: Stalls From Load Factor']['why'] = 'Each principle carries a specific risk and mitigation.'
+SECTIONS['Definitions: Chord Line and Camber']['why'] = 'Lift is the foundation for every other topic in this lesson.'
+SECTIONS['Definitions: Chord Line and Camber']['goals'] = ['Airfoil terms and design', 'Bernoulli and Newton', 'Relative wind and AOA', 'Critical AOA']
+KNOW.pop('How Induced Drag Happens', None)
+KNOW['Lift, Speed, and AOA'] = 'Lift varies with the square of airspeed (PHAK 5-4).'
+KNOW['Definitions: Relative Wind and Angle of Attack'] = 'Lift acts perpendicular to the relative wind; the relative wind is opposite the flight path.'
+KNOW['The Hazard: Induced Roll'] = 'A large aircraft\'s wake can exceed a C172S\'s full aileron authority.'
+
+KNOW.update({
+ 'Forces in Balance and in a Climb': 'Opposing forces cancel. Lift and weight exceed thrust and drag (PHAK 5-2).',
+ 'Definition: Induced Drag': 'By-product of lift. Present whenever lift is produced. Increases with AOA.',
+ 'Load Factor in Turns': '60 degrees of bank: 2 Gs. Increases rapidly past 45 to 50 degrees (PHAK 5-34).',
+ 'Maneuvering Speed (VA)': 'VA does not protect against multiple full inputs or inputs in more than one axis (PHAK 5-35).',
+ 'Turning Tendencies: Torque Reaction': 'Four elements: torque reaction, slipstream, gyroscopic precession, P-factor.',
+})
+KNOW.pop('Definition: Induced Drag', None)
