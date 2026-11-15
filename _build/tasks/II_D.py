@@ -120,3 +120,72 @@ TASK['lp']['errors'].insert(2, ('Saying induced drag comes from the shape of the
 TASK['lp']['errors'].insert(3, ('Thinking ground effect gives more power', 'It reduces induced drag. Lifting off too slow can leave the airplane unable to climb once out of ground effect (PHAK 5-12).'))
 
 rm['lp']['teach'] = ['Show the roadmap. Each step answers a question that leads to the next: the wing makes lift; lift comes with forces and drag; we take parasite drag first, then induced drag and how wingtip vortices tilt lift back; those same vortices become wake turbulence; then why the airplane stays stable, what pulls it left, and how much load it can take. Risk management and teaching tie it together.']
+
+# ---- wording pass (v2.1): clearer bullets, no side notes to the applicant
+import re as _re
+_B = {
+ 'Objective': ['Explain how a wing makes lift', 'Explain the four forces and drag', 'Explain stability and turning tendencies', 'Apply load factor and wake turbulence'],
+ "Newton's Third Law and Downwash": ['Every action has an equal reaction', 'Wing pushes air down (downwash)', 'Air pushes the wing up', 'Bernoulli and Newton work together'],
+ 'Lift, Speed, and AOA': ['Lift: proportional to airspeed squared', 'Twice the speed: four times the lift', 'Slower: needs a higher AOA', 'Pilot controls lift with AOA and speed'],
+ 'The Four Forces': ['Thrust: forward, from the propeller', 'Drag: rearward, opposes thrust', 'Lift: perpendicular to the flight path', 'Weight: straight down through the CG'],
+ 'Forces in Balance and in a Climb': ['Steady flight: opposing forces cancel', 'The four are not all equal', 'Lift and weight are the largest', 'Climbing: part of weight acts as drag'],
+ 'Drag: Two Kinds': ['Parasite: not caused by lift', 'Induced: caused by making lift', 'Total drag = parasite + induced', 'Parasite first, then induced'],
+ 'How Induced Drag Happens': ['1. Air curls around the wingtip', '2. Vortex pushes air down (downwash)', '3. Downwash tilts the relative wind', '4. Lift tilts back: that is induced drag'],
+ 'Induced Drag Increases With AOA': ['Higher AOA: bigger pressure difference', 'Stronger vortices, more downwash', 'Slow flight: most induced drag', 'Varies inversely with airspeed squared'],
+ 'Total Drag and L/D Max': ['Induced drag: highest when slow', 'Parasite drag: highest when fast', 'L/D max: lowest total drag', 'Drag climbs near stall and near VNE'],
+ 'Induced Drag in a Turn: Adverse Yaw': ['Lowered aileron: more lift, more drag', 'That wing gets pulled back', 'Nose yaws opposite the turn', 'Fix: coordinate with rudder'],
+ 'Induced Drag Near the Ground: Ground Effect': ['Ground blocks vortices and downwash', 'Less induced drag: the float', 'Strongest below one wingspan', 'Climbing out: induced drag returns'],
+ 'From Wingtip Vortex to Wake Turbulence': ['Vortices trail behind every airplane', 'Present from rotation to touchdown', 'Strongest: heavy, clean, slow', 'Flaps out: wake decays faster'],
+ 'The Hazard: Induced Roll': ['Hazard: an induced rolling moment', 'Can exceed your roll control', 'Short wings: hardest to counter', 'C172S behind an airliner: high risk'],
+ 'How Vortices Move': ['Sink several hundred fpm', 'Near ground: move outward 2 to 3 kts', 'Light crosswind: one may stay on runway', 'Light quartering tailwind: worst case'],
+ 'Wake Turbulence Precautions': ['Landing: stay above, land beyond', 'Departing: rotate before their point', 'Climb above their path, turn clear', 'En route: avoid below and behind'],
+ 'Static Stability: The Bowl Method': ['Bowl: ball rolls back (positive)', 'Flat floor: sidesteps, stays (neutral)', 'Hill: rolls away (negative)', 'Static is the first reaction only'],
+ 'Dynamic Stability': ['Dynamic: what happens over time', 'Positive: swings get smaller', 'Neutral: swings stay the same', 'Negative: swings get bigger'],
+ 'Longitudinal Stability (Pitch)': ['Pitch: about the lateral axis', 'CG ahead of the center of lift', 'Tail pushes down to balance', 'Slow down: nose drops, speed returns'],
+ 'Lateral Stability (Roll)': ['Roll: about the longitudinal axis', 'Dihedral, sweepback, keel effect', 'Lower wing gets more AOA, rises', 'High wing adds keel effect (C172S)'],
+ 'Directional Stability (Yaw)': ['Yaw: about the vertical axis', 'Fin works like arrow feathers', 'More side area behind the CG', 'Nose weathervanes into the wind'],
+ 'Turning Tendencies: Torque Reaction': ['Four parts make up "torque"', 'Prop turns clockwise (pilot view)', 'Airplane tries to roll left', 'On the ground: extra left tire drag'],
+ 'Turning Tendencies: Slipstream and Gyroscopic': ['Slipstream hits left side of the fin', 'Strongest: high power, low speed', 'Precession acts 90 degrees ahead', 'Mostly tailwheel, when tail rises'],
+ 'Turning Tendencies: P-Factor': ['High AOA: climbs and slow flight', 'Descending blade takes a bigger bite', 'More thrust on the right side', 'Nose yaws left: hold right rudder'],
+ 'Load Factor in Turns': ['60 degree bank: 2 Gs', 'Climbs fast past 45 to 50 degrees', 'Light airplanes yield near 70 to 75', 'Wing must lift that many Gs'],
+ 'Load Factor and Stall Speed': ['Stall speed rises with load factor', 'By the square root of load factor', 'C172S wings level: 48 KIAS', 'C172S at 60 degrees: 68 KIAS'],
+ 'Maneuvering Speed (VA)': ['One full input, one axis, smooth air', 'C172S: 105 KIAS at 2,550 lb', 'Lighter airplane: lower VA', 'No protection from combined inputs'],
+ 'Risk: Stalls From Load Factor': ['Steep turns raise stall speed', 'Trap: overshooting base to final', 'Keep bank shallow near the ground', 'Recover: reduce the AOA'],
+ 'Risk: Wake, Turning Tendencies, Spirals': ['Wake: plan your rotation point', 'Left yaw: lead with right rudder', 'Spiral: level the wings, then pull', 'Know your airplane\'s limits'],
+ 'Teaching It: Three Elements in Flight': ['Stability: trim, push, release', 'P-factor: climb, feel the left yaw', 'Load factor: 45 and 60 degree turns', 'Debrief each one'],
+ 'Common Errors': ['"All four forces are equal"', '"Stalls are caused by low speed"', 'Drag "inversely" (not squared)', 'VA treated as full protection'],
+ 'Review Questions': ['State Bernoulli\'s Principle', 'What causes a stall?', 'Load factor at 60 degrees of bank?', 'Departing behind a heavy: rotate where?'],
+}
+_NOTES = {
+ 'Static Stability: The Bowl Method': None,
+ 'Definition: Stability': 'Read the definition. Stability is built in by the designer; the pilot does not add it.',
+ 'Definition: Load Factor': 'Read the definition. C172S normal category: +3.8 and -1.52 Gs flaps up, +3.0 flaps down. Utility: +4.4 and -1.76.',
+ 'Maneuvering Speed (VA)': 'VA protects against one full input in one axis only. It does not protect against multiple full inputs or inputs in more than one axis, and it goes down as weight goes down.',
+}
+_DROP = [r'\s*Your note "Jeep vs\. Ferrari" is a good analogy\.', r', which your whiteboard notes also show']
+_KILL = ('Your whiteboard', 'whiteboard wording')
+for _s in TASK['slides']:
+    if _s['title'] in _B: _s['bullets'] = _B[_s['title']]
+    if _NOTES.get(_s['title']): _s['notes'] = _NOTES[_s['title']]
+    _t = _s.get('lp', {}).get('teach')
+    if _t:
+        out = []
+        for p in _t:
+            if any(k in p for k in _KILL): continue
+            for pat in _DROP: p = _re.sub(pat, '', p)
+            p = p.replace('Bowl method (from the applicant\'s whiteboard): ', 'Bowl method: ')
+            out.append(p)
+        _s['lp']['teach'] = out
+TASK['references'] = [r for r in TASK['references'] if 'whiteboard' not in r]
+TASK['lp']['equipment'][1] = 'Whiteboard and markers'
+TASK['lp']['instructor'][1] = 'Build the chain on the whiteboard as you go: airfoil, four forces, drag curve, vortex and downwash, bowl method.'
+TASK['lp']['conclusion'][1] = 'Ask the review questions, then have the student walk the whole chain back on the whiteboard from lift to load factor.'
+TASK['lp']['objective'] = 'The student will be able to explain how a wing makes lift, the four forces and both types of drag, how wingtip vortices cause induced drag and wake turbulence, airplane stability, turning tendencies, and load factors, and will apply each one to the C172S and manage the risks that come with them.'
+
+for _s in TASK['slides']:
+    if _s['title'] == 'Principles of Flight':
+        _s['lp']['teach'] = ['Attention: ask the student if they have ever held a hand out of a car window and felt it rise when they tilted it. The PHAK uses the same example (PHAK 4-10). This lesson explains why.']
+    if _s['title'] == 'Objective':
+        _s['lp']['teach'] = ['State the objective in plain words: by the end, the student can explain how the wing makes lift, what drag it costs, where the wingtip vortices go, why the airplane stays stable, what pulls it left, and how much load it can take.']
+    if _s['title'] == 'Definitions: Chord Line and Camber':
+        _s['lp']['teach'] = [x.replace('The glossary adds that the curved upper camber', 'The curved upper camber') for x in _s['lp']['teach']]

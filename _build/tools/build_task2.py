@@ -1,6 +1,6 @@
 import sys, json, os, re, importlib.util
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import cfi, cfi2
+import cfi, cfi2, lp_gdocs
 def load(p):
     sp = importlib.util.spec_from_file_location(os.path.basename(p)[:-3], p); m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m); return m
 taskfile, extrasfile, imgdir, outdir, acsjson = sys.argv[1:6]
@@ -25,6 +25,6 @@ print('QA issues:', len(iss)); [print('  ', i) for i in iss]
 os.makedirs(outdir, exist_ok=True)
 base = f"{task['code']} {task['name']}"
 n = cfi2.build_deck(slides, imgdir, os.path.join(outdir, base + ' - Slides.pptx'))
-cfi.build_lp(task, os.path.join(outdir, base + ' - Lesson Plan.docx'))
+lp_gdocs.build_lp(task, os.path.join(outdir, base + ' - Lesson Plan.docx'))
 json.dump({'code': task['code'], 'name': task['name'], 'slides': n, 'issues': iss, 'cover': task['_cover']}, open(os.path.join(outdir, '_qa.json'), 'w'), indent=1)
 print('built', n, 'slides')
